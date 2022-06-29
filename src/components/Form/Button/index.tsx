@@ -9,7 +9,7 @@ interface Props extends RectButtonProps{
 
 export function Button({
     title, 
-    onPress, 
+    onPress,
     ...rest
 }: Props) {
     return(

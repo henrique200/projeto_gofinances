@@ -67,6 +67,8 @@ export function Register() {
 
 
     function handleRegister(form: FormData) {
+        console.log('cheguei aqui');
+        
         if(!transactionType)
             return Alert.alert('Selecione o tipo da transação');
 
