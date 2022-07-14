@@ -3,9 +3,14 @@ import { FlatList, FlatListProps } from 'react-native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
 import Constants from 'expo-constants';
-import { BorderlessButton } from 'react-native-gesture-handler';
+import { BorderlessButton, BorderlessButtonProps } from 'react-native-gesture-handler';
+import { PropsWithChildren } from 'react';
+
 
 import { DataListProps } from '.';
+
+interface ButtonProps extends PropsWithChildren<BorderlessButtonProps>{}
+
 
 export const Container = styled.View`
     flex: 1;
@@ -59,7 +64,7 @@ export const UserName = styled.Text`
     font-size: ${RFValue(18)}px;
 `;
 
-export const LogoutButton = styled(BorderlessButton)``;
+export const LogoutButton = styled(BorderlessButton)<ButtonProps>``;
 
 export const Icon = styled(Feather)`
     font-size: ${RFValue(24)}px;
